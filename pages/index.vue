@@ -4,34 +4,49 @@
       <h1>IBC</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link :to="'/posts/' + 1" class="post-preview">
-        <article class="post-preview">
-          <div
-            class="post-thumbnail"
-            style='background-image: url("https://placedog.net/500")'
-          ></div>
-          <div class="post-content">
-            <h1>Post title</h1>
-            <p>preview text</p>
-          </div>
-        </article>
-      </nuxt-link>
-
-      <nuxt-link :to="'/posts/' + 2" class="post-preview">
-        <article>
-          <div
-            class="post-thumbnail"
-            style='background-image: url("https://placedog.net/325")'
-          ></div>
-          <div class="post-content">
-            <h1>Post title</h1>
-            <p>preview text</p>
-          </div>
-        </article>
-      </nuxt-link>
+      <PostPreview
+        id="1"
+        thumbnail="https://placedog.net/321"
+        title="Just Javascript"
+        previewText="Notas del curso"
+      />
+      <PostPreview
+        id="2"
+        thumbnail="https://placedog.net/221"
+        title="Eloquent Javascript"
+        previewText="Notas del libro"
+      />
+      <PostPreview
+        id="3"
+        thumbnail="https://placedog.net/421"
+        title="CODE"
+        previewText="Notas del libro"
+      />
+      <PostPreview
+        id="4"
+        thumbnail="https://placedog.net/721"
+        title="CSS Art"
+        previewText="Experimento"
+      />
+      <PostPreview
+        id="5"
+        thumbnail="https://placedog.net/821"
+        title="Three.js"
+        previewText="Experimento"
+      />
     </section>
   </div>
 </template>
+
+<script>
+import PostPreview from "@/components/Posts/PostPreview";
+
+export default {
+  components: {
+    PostPreview
+  }
+};
+</script>
 
 <style scoped>
 .intro {
@@ -39,6 +54,7 @@
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  background-image: url("~assets/images/hero-background.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -71,41 +87,5 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
 }
 </style>
