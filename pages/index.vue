@@ -34,6 +34,18 @@
         title="Three.js"
         previewText="Experimento"
       />
+      <PostPreview
+        id="6"
+        thumbnail="https://placedog.net/921"
+        title="Memorias de Marco Aurelio"
+        previewText="Notas del libro"
+      />
+      <PostPreview
+        id="7"
+        thumbnail="https://placedog.net/515"
+        title="Naval Almanaque"
+        previewText="Notas del libro"
+      />
     </section>
   </div>
 </template>
